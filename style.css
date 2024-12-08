@@ -1,0 +1,398 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'spartan',sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+
+}
+
+h1{
+    font-size: 70px;
+    line-height: 64px;
+    color: #222;
+}
+
+h2{
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+}
+
+h4{
+    font-size: 30px;
+    color: #222;
+}
+
+h6{
+    font-size: 15px;
+    font-weight: 700;
+}
+
+p{
+    font-size: 25px;
+    color: #929694;
+    margin: 15px 0 20px 0;
+    
+}
+
+span{
+    font-size: 25px;
+    color: #929694;
+}
+
+.section-p1{
+    padding: 40px 80px;
+}
+
+button.normal{
+    font-size: 20px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    outline:none;
+    transition: 0.2;
+}
+
+
+body{
+    width: 100%;
+    
+}
+
+#header{
+    
+        display: flex; /* Utilise un conteneur flexbox pour organiser les éléments enfants horizontalement. */
+        align-items: center; /* Aligne les éléments enfants verticalement au centre. */
+        justify-content: space-between; /* Espace les éléments enfants pour qu'ils soient placés aux extrémités du conteneur. */
+        padding: 10px 50px; /* Ajoute un espace intérieur de 20px en haut et en bas, et 80px à gauche et à droite. */
+        background-color: #4CAF50; /* Définit une couleur de fond verte pour le header. */
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.06); /* Ajoute une ombre légère sous le header pour donner une profondeur visuelle. */
+        height: 120px;
+        transition: all 0.3s ease; /* Transition pour une réduction fluide */
+        
+        
+}
+
+
+#navbar {
+    display: flex; /* Utilise un conteneur flexbox pour aligner les éléments enfants horizontalement. */
+    align-items: center; /* Aligne les éléments enfants verticalement au centre. */
+    justify-content: center; /* Centre les éléments enfants horizontalement dans le conteneur. */
+}
+
+#navbar li {
+    list-style: none; /* Supprime les puces ou marqueurs par défaut des éléments de liste. */
+    padding: 0 50px; /* Ajoute un espace intérieur horizontal de 20px de chaque côté pour espacer les éléments. */
+    position: relative;
+}
+
+
+#navbar li a {
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: 0.3 ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+
+    color: #c7e865;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background-color:#c7e865;
+    position: absolute;
+    bottom: -4px;
+    left: 50px;
+}
+
+
+/* Section Hero */
+#hero-container {
+    display: flex; /* Flexbox pour aligner l'image et le texte */
+    align-items: center; /* Centrer verticalement */
+    justify-content: space-between; /* Centrer horizontalement (optionnel) */
+    padding:0  80px;
+    gap: 20px; /* Espace entre l'image et le texte */
+   
+}
+
+.hero-img {
+    max-width:  auto;
+    height: auto;
+    width: 900px;
+    border-radius: 5px;
+    margin-left: 50px;
+    margin-top: 100px;
+    flex: 1;
+    background-position: top 25% right 0;
+    flex-direction: column;
+    
+}
+
+#hero-text {
+    max-width: 900px;
+    text-align: left; /* Aligner le texte à gauche */
+    margin-left: 50px;
+    align-items: flex-start;
+    
+    
+}
+
+#hero-text h1 {
+    
+    max-width: 800px;
+    font-size: 50px;
+    color: #0f100f;
+}
+#hero-text h1 b {
+    max-width: 800px;
+    color:#4CAF50;
+}
+#hero-text h1 b1 {
+    color: #b8db0a;
+}
+#hero-text h4 {
+    font-size: 20px;
+    color: #555;
+    margin: 10px 0;
+}
+
+#hero-text p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#hero-text button {
+
+   /* background-image: url(img/button.png);*/
+    background-color: #4CAF50;
+    color: white;
+    border: 0;
+    padding: 14px 80px 14px 65px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+
+#hero-text button:hover {
+    background-color: #1e5c39;
+}
+/* Conteneur de l'image */
+#image-container {
+    position: relative;
+    text-align: center;
+}
+
+/* Image principale */
+
+/* Boutons ronds */ 
+
+#image-buttons {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ccc;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot:hover,
+.dot.active {
+    background-color: #2a7c4f;
+} 
+
+#feature{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap:wrap;
+}
+#feature .fe-box{
+    width: 180px;
+    text-align: center;
+    padding: 15px 1px;
+    box-shadow: 20px 20px 34px rgba(0,0,0,0.03);
+    border: 1px solid #cce7d0;
+    border-radius: 4px;
+    margin: 0px 0;
+}
+
+#feature .fe-box:hover{
+    box-shadow: 10px 10px 54px rgba (70, 62, 221, 0.1);
+
+}
+#feature .fe-box  img{
+    width: 100%;
+    margin-bottom: 10px;
+}
+#feature .fe-box h6 {
+    display: inline-block;
+    padding: 9px 8px 6px 8px;
+    line-height: 2;
+    border-radius: 4px;
+    color: #d90a0a;
+    background-color: #fddde4;
+    font-size: 15px;
+    
+}
+
+#feature .fe-box:nth-child(1) h6 {
+    background-color: #dbf1ff;
+}
+#feature .fe-box:nth-child(2) h6 {
+    background-color: #f8e6f3;
+}
+#feature .fe-box:nth-child(3) h6 {
+    background-color: #cdebbc;
+}
+#feature .fe-box:nth-child(4) h6 {
+    background-color: #f1fab8;
+}
+
+
+
+#product1 {
+    text-align: center;
+}
+
+#product1 .pro-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+
+}
+
+#product1 .pro{
+    width: 23%;
+    min-width: 500px;
+    padding: 10px 12px;
+    border: 1px solid #cce7d0;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+    margin: 15px 0;
+    transition: 0.2s ease;
+    position: relative;
+}
+
+#product1 .pro .pro:hover{
+    box-shadow: 20px 20 px 30px rgba(0, 0, 0, 0.06);
+}
+
+#product1 .pro img {
+    
+    border-radius: 20px;
+    
+}
+
+#product1 .pro .descrip{
+    text-align: start;
+    padding: 10px 0;
+}
+
+#product1 .pro .descrip span {
+    color: #b5b2b2;
+    font-size: 20px;
+    
+    ;
+}
+
+#product1 .pro .descrip h5{
+    padding-top: 7x;
+    color: #1a1a1a;
+    font-size: 25px;
+
+}
+ 
+#product1 .pro .descrip img {
+    font-size: 12px;
+    color: #baf801;
+}
+.star {
+    filter: brightness(0) saturate(100%) invert(85%) sepia(100%) saturate(500%) hue-rotate(340deg) brightness(105%) contrast(95%);
+  }
+
+  #product1 .pro .descrip h4 {
+    padding-top: 7px; 
+    font-size: 40px;
+    font-weight: 700;
+    color: #f42121;
+  }
+  
+
+  #product1 .pro .cart{
+    height: 50px;
+    width: 50px;
+    line-height: 90px;
+    border-radius: 20px;
+    background-color: #e8f6ea;
+    font-weight: 500;
+    color: #088178;;
+    border: 1px solid #cce7d8;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+
+ }
+
+
+ #banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url("img/banner/b2.jpg");
+    width: 100%;
+    height: 40hv;
+    background-size: cover;
+    background-position: center;
+ }
+
+ #banner h4{
+    color: #fff;
+    font-size: 16px;
+ }
+
+ #banner h2{
+    color: #fff;
+    font-size: 30px;
+    padding: 10px 0;
+ }
+
+ #banner span{
+    color: red;
+    
+ }
+
+ #banner button:hover{
+
+    background: #f6e207;
+    color:#fff;
+ }

@@ -1,0 +1,77 @@
+nav bar ccs
+
+/* Styles de base pour la navbar */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  background-color: #4CAF50;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+nav ul li a:hover {
+  background-color: #45a049;
+}
+
+/* Styles pour les sous-catégories (dropdown menu) */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-menu li {
+  width: 150px;
+}
+
+.dropdown-menu li a {
+  color: black;
+  padding: 10px 15px;
+  text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Afficher les sous-catégories au survol */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+
+
+
+// html
+ <nav>
+                <ul>
+                  <li><a href="index.html">Accueil</a></li>
+                  <li class="dropdown">
+                    <a href="produits.html">Produits</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="fruits.html">Fruits</a></li>
+                      <li><a href="legumes.html">Légumes</a></li>
+                      <li><a href="cereales.html">Céréales</a></li>
+                      <li><a href="accessoires.html">Accessoires agricoles</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="mon-compte.html">Mon Compte</a></li>
+                  <li><a href="panier.html">Panier</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+              </nav>
+
+
